@@ -1,7 +1,9 @@
 <template>
   <div class="stock-sell-form">
     <span class="company-name">{{ stock && stock.name }}</span>
-    <span class="stock-info">(Price: {{ formattedPrice }} | Quantity: {{ stockInfo.quantity }})</span>
+    <span class="stock-info"
+      >(Price: {{ formattedPrice }} | Quantity: {{ stockInfo.quantity }})</span
+    >
 
     <input type="number" hint="Quantity" v-model="quantity" />
     <button @click="sell">Sell</button>

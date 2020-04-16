@@ -1,5 +1,5 @@
 # stock-portfolio
-
+to view the live site go [here](http://vue-portfolio-project.s3-website.us-east-2.amazonaws.com/)
 ## Project setup
 ```
 npm install
@@ -29,14 +29,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## to deploy
-- build project
+- setup aws profile via aws cli, then:
 ```
-npm run build
+vue invoke s3-deploy    # answer prompts to setup vue.config.js with bucket info & create deploy script 
+npm run build   # build
+npm run deploy  # deploy
 ```
-- [setup AWS Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html)
-    - had to enable static website hosting with index dooc & errror doc to be `index.html`
-    - for this project, we made the bucket have public access
-    - put everything in dist folder on the server -> TODO need to figure out how to do that via script not freaking drag & drop
 
 ### TODOs
 - add in form validation
